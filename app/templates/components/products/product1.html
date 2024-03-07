@@ -1,0 +1,57 @@
+  <!DOCTYPE html>
+  <html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bangers&family=Carter+One&family=Nunito+Sans:wght@400;700&display=swap"
+      rel="stylesheet">
+
+    <title>Best Seller</title>
+
+  </head>
+
+  <body>
+
+    <!--
+                    - #PRODUCT
+                -->
+
+    <section class="aboutProduct" id="shop" aria-label="product">
+      <div class="aboutHeader">
+        <h2 class="h2 section-title">
+          <span class="span">Best</span> Seller
+        </h2>
+      </div>
+      <div class="aboutBottom">
+        <div class="aboutLeft ">
+          <img src="{{url_for('static', filename='images/product-1.jpg')}}" width="300" height="300" alt="Commodo leo sed porta">
+          <h3> Commodo leo sed porta</h3>
+          <p class="card-price" value="15">$15.00</p>
+        </div>
+
+        <div class="aboutRight">
+          <h2 class="h2 section-title">
+            <span class="span">About</span> Product
+          </h2>
+          <ul>
+
+            <li><b>Complete –</b> provides adequate amounts of all the required nutrients </li>
+            <li><b>Balanced –</b> the nutrients are present in the correct proportions</li>
+            <li><b>Digestible –</b> your pet is able to digest the food and absorb the nutrients</li>
+            <li><b>Palatable –</b> appealing enough to be eaten</li>
+            <li><b>Safe –</b> free of toxins or anything which could harm a pet</li>
+
+          </ul>
+        </div>
+
+      </div>
+
+    </section>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+  </body>
+
+  </html>

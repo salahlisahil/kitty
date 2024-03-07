@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Store</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bangers&family=Carter+One&family=Nunito+Sans:wght@400;700&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+
+    <section class="section product" id="shop" aria-label="product">
+        <div class="container">
+
+            <h2 class="h2 section-title">
+                <span class="span">Best</span> Seller
+            </h2>
+
+            <ul id="grid-list" class="grid-list">
+
+
+
+            </ul>
+
+        </div>
+    </section>
+
+    <script>
+        let products = [
+            {
+                id: 1,
+                name: "Commodo leo sed porta",
+                price: '15.00',
+                img1: "{{ url_for('static', filename='images/product-1.jpg') }}",
+                img2: "{{ url_for('static', filename='images/product-1_0.jpg') }}",
+                class: 'rating-wrapper',
+                href: "{{ url_for('main.product1') }}"
+            },
+            {
+              id: 2,
+              name: "Purus consequat congue sit",
+              price: '45.00',
+              img1: "{{ url_for('static', filename='images/product-2.jpg') }}",
+              img2: "{{ url_for('static', filename='images/product-2_0.jpg') }}",
+              class: 'rating-wrapper gray',
+              href: "{{ url_for('main.product2') }}"
+            },
+            {
+              id: 3,
+              name: "Morbi vel arcu scelerisque",
+              price: '45.00',
+              img1: "{{ url_for('static', filename='images/product-3.jpg') }}",
+              img2: "{{ url_for('static', filename='images/product-3_0.jpg') }}",
+              class: 'rating-wrapper gray',
+              href: './components/products/product3.html'
+            },
+            {
+              id: 4,
+              name: "Morbi vel arcu scelerisque",
+              price: '49.00',
+              img1: "{{ url_for('static', filename='images/product-4.jpg') }}",
+              img2: "{{ url_for('static', filename='images/product-4_0.jpg') }}",
+              class: 'rating-wrapper gray',
+              href: './components/products/product4.html'
+            },
+            {
+              id: 5,
+              name: "Morbi vel arcu scelerisque",
+              price: '85.00',
+              img1: "{{ url_for('static', filename='images/product-5.jpg') }}",
+              img2: "{{ url_for('static', filename='images/product-5_0.jpg') }}",
+              class: 'rating-wrapper gray',
+              href: './components/products/product5.html'
+            },
+            {
+              id: 6,
+              name: "Nam justo libero porta ege",
+              price: '85.00',
+              img1: "{{ url_for('static', filename='images/product-6.jpg') }}",
+              img2: "{{ url_for('static', filename='images/product-6_0.jpg') }}",
+              class: 'rating-wrapper gray',
+              href: './components/products/product6.html'
+            },
+            {
+              id: 7,
+              name: "Nam justo libero porta ege",
+              price: '85.00',
+              img1: "{{ url_for('static', filename='images/product-7.jpg') }}",
+              img2: "{{ url_for('static', filename='images/product-7_0.jpg') }}",
+              class: 'rating-wrapper gray',
+              href: './components/products/product7.html'
+
+            },
+            {
+              id: 8,
+              name: "Etiam commodo leo sed",
+              price: '55.00',
+              img1: "{{ url_for('static', filename='images/product-8.jpg') }}",
+              img2: "{{ url_for('static', filename='images/product-8_0.jpg') }}",
+              class: 'rating-wrapper gray',
+              href: './components/products/product8.html'
+            }
+        ]
+
+        const gridList = document.getElementById("grid-list")
+        products.forEach(product => {
+            const productElement = document.createElement('li');
+            productElement.innerHTML = `
+            <div data-product-id=${product.id} class="product-card">
+
+<div class="card-banner img-holder" style="--width: 360; --height: 360;">
+  <img src=${product.img1} width="360" height="360" loading="lazy"
+    alt="Commodo leo sed porta" class="img-cover default">
+  <img src=${product.img2} width="360" height="360" loading="lazy"
+    alt="Commodo leo sed porta" class="img-cover hover">
+
+   
+</div>
+
+<div class="card-content">
+
+  <div class="wrapper">
+    <div class='${product.class}'>
+      <ion-icon name="star" aria-hidden="true"></ion-icon>
+      <ion-icon name="star" aria-hidden="true"></ion-icon>
+      <ion-icon name="star" aria-hidden="true"></ion-icon>
+      <ion-icon name="star" aria-hidden="true"></ion-icon>
+      <ion-icon name="star" aria-hidden="true"></ion-icon>
+    </div> <span class="span">(${product.id})</span>
+  </div>
+
+  <h3 class="h3">
+    <a href=${product.href}  class="card-title">${product.name}</a>
+  </h3>
+
+  <data class="card-price" value="15">${'$' + product.price}</data>
+
+</div>
+
+</div>
+
+  `
+            gridList.appendChild(productElement)
+        })
+
+    </script>
+     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+
+</html>

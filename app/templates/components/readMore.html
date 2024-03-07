@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <title>Offer</title>
+</head>
+
+<body>
+    <section class="section offer" aria-label="offer">
+        <div class="container">
+            <h2 class="h2 section-title">
+                <span class="span">About</span> Pets
+            </h2>
+            <ul class="grid-list">
+                <li>
+                    <div class="offer-card has-bg-image img-holder"
+                        style="background-image: url('{{ url_for('static', filename='images/offer-banner-1.jpg') }}'); width: 540px; height: 374px;">
+
+                        <p class="card-subtitle">Selected Items. Online Only.</p>
+
+                        <h3 class="h3 card-title">
+                            Hot Summer <span class="span">Deals</span>
+                        </h3>
+
+                        <a href="{{ url_for('main.Dog1') }}" class="btn">Read More</a>
+                    </div>
+                </li>
+
+                <li>
+                    <div class="offer-card has-bg-image img-holder"
+                        style="background-image: url('{{ url_for('static', filename='images/offer-banner-2.jpg') }}'); width: 540px; height: 374px;"
+
+                        <p class="card-subtitle">Treats & Grooming</p>
+
+                        <h3 class="h3 card-title">
+                            Spoil your true <span class="span">love</span>
+                        </h3>
+
+                        <a href="{{ url_for('main.Cat1') }}" class="btn">Read More</a>
+                    </div>
+                </li>
+
+                <li>
+                    <div class="offer-card has-bg-image img-holder"
+                        style="background-image: url('{{ url_for('static', filename='images/offer-banner-3.jpg') }}'); width: 540px; height: 374px;">
+
+                        <p class="card-subtitle">Our Brand You Will Love</p>
+
+                        <h3 class="h3 card-title">
+                            New in this <span class="span">year</span>
+                        </h3>
+
+                        <a href="{{ url_for('main.brid1') }}" class="btn">Read More</a>
+                    </div>
+                </li>
+
+                <li>
+                    <div class="offer-card has-bg-image img-holder"
+                        style="background-image: url('{{ url_for('static', filename='images/offer-banner-4.jpg') }}'); width: 540px; height: 374px;">
+
+                        <p class="card-subtitle">Our Brand You Will Love</p>
+
+                        <h3 class="h3 card-title">
+                            New in this <span class="span">year</span>
+                        </h3>
+
+                        <a href="{{ url_for('main.Dog2') }}" class="btn">Read More</a>
+                    </div>
+                </li>
+
+                <li>
+                    <div class="offer-card has-bg-image img-holder"
+                        style="background-image: url('{{ url_for('static', filename='images/offer-banner-5.jpg') }}'); width: 540px; height: 374px;"
+
+                        <p class="card-subtitle">Our Brand You Will Love</p>
+
+                        <h3 class="h3 card-title">
+                            New in this <span class="span">year</span>
+                        </h3>
+
+                        <a href="{{ url_for('main.Cat2') }}" class="btn">Read More</a>
+                    </div>
+                </li>
+
+                <li>
+                    <div class="offer-card has-bg-image img-holder"
+                        style="background-image: url('{{ url_for('static', filename='images/offer-banner-6.jpg') }}'); width: 540px; height: 374px;">
+
+                        <p class="card-subtitle">Our Brand You Will Love</p>
+
+                        <h3 class="h3 card-title">
+                            New in this <span class="span">year</span>
+                        </h3>
+
+                        <a href="{{ url_for('main.brid2') }}" class="btn">Read More</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </section>
+</body>
+
+</html>

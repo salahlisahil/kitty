@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css) }}">
+    <title>Pet Adoption</title>
+</head>
+
+<body>
+    <!-- 
+        - #OFFERS
+      -->
+
+    <section class="section offer" aria-label="offer">
+
+        <div class="container">
+            <h2 class="h2 section-title">
+                <span class="span">Pet</span> Process
+            </h2>
+            <div class="grooming">
+                <div class="grooming-item">
+                    <div class="item-top">
+                        <div class="item-header">
+                            <h2>Bespoke Grooming Experiences:</h2>
+                            <div class="line"></div>
+                            <div class="circle"></div>
+                        </div>
+                        <div class="item-p">
+                            <p>At Progressive Canines, we believe in the individuality of each dog. Our grooming
+                                services
+                                are tailored to enhance your canine companion's unique features and personality. From
+                                breed-specific trims to personalized pampering, we create bespoke grooming experiences
+                                that
+                                go beyond aesthetics, ensuring your dog feels as special as they look.</p>
+                        </div>
+                    </div>
+                    <div class="item-top">
+                        <div class="item-header">
+                            <h2>Holistic Wellness Checks:</h2>
+                            <div class="line"></div>
+                            <div class="circle"></div>
+                        </div>
+                        <div class="item-p">
+                            <p>Grooming at Progressive Canines goes beyond the surface. Our skilled groomers conduct
+                                holistic wellness checks during each session. From coat and skin health to eyes, ears,
+                                and nails, we pay attention to every detail. This comprehensive approach ensures your
+                                dog not only looks fabulous but also enjoys optimal health and well-being.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="item-center">
+                    <img src="{{ url_for('static', filename='images/imageCrooming.webp') }}" alt="">
+                </div>
+                <div class="grooming-item">
+                    <div class="item-top">
+                        <div class="item-header">
+                            <h2>Stress-Free Spa Atmosphere:</h2>
+                            <div class="line"></div>
+                            <div class="circle"></div>
+                        </div>
+                        <div class="item-p">
+                            <p>We understand that grooming can be an intimate experience for your dog. Our grooming
+                                salon is designed to provide a stress-free and calming spa atmosphere. Progressive
+                                Canines prioritizes gentle handling and positive reinforcement, creating an environment
+                                where your pet can relax and enjoy their grooming session, fostering a positive
+                                association with the grooming process.</p>
+                        </div>
+                    </div>
+                    <div class="item-top">
+                        <div class="item-header">
+                            <h2>Empowering Pet Parents:</h2>
+                            <div class="line"></div>
+                            <div class="circle"></div>
+                        </div>
+                        <div class="item-p">
+                            <p>Progressive Canines believes in empowering pet parents with the knowledge to maintain
+                                their dog's grooming needs at home. Our groomers provide personalized tips and advice on
+                                brushing techniques, coat care, and other aspects of at-home grooming. This commitment
+                                to education ensures a seamless transition between salon visits, allowing you to
+                                contribute to your dog's overall grooming routine.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <h2 class="h2 section-title">
+                <span class="span">Pet</span> Services
+            </h2>
+            <ul class="grid-list adoption">
+
+                <li>
+                    <img src="{{ url_for('static', filename='images/grooming1.jpg') }}" alt="grooming">
+                    <p>Bespoke Grooming Experiences</p>
+
+                </li>
+                <li>
+                    <img src="{{ url_for('static', filename='images/grooming2.webp') }}" alt="grooming">
+                    <p>Stress-Free Spa Atmosphere</p>
+                </li>
+                <li>
+                    <img src="{{ url_for('static', filename='images/grooming3.webp') }}" alt="grooming">
+                    <p>Holistic Wellness Checks</p>
+                </li>
+            </ul>
+    </section>
+
+    <script src="{{ url_for('static', filename='js/service.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/service.js') }}"></script>
+</body>
+
+</html>

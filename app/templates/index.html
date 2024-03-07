@@ -1,0 +1,787 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!--
+    - primary meta tag
+  -->
+  <title>Kitter - Hight Quality Pet Food</title>
+  <meta name="title" content="Kitter - Hight Quality Pet Food">
+  <meta name="description" content="This is an eCommerce html template made by codewithsadee">
+  <!--
+    - favicon
+  -->
+  <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.svg') }}" type="image/svg+xml">
+
+
+  <!-- Font Awesome CND-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <!--
+    - custom css link
+  -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+  <!--
+    - google font link
+  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Bangers&family=Carter+One&family=Nunito+Sans:wght@400;700&display=swap"
+    rel="stylesheet">
+
+  <!--
+    - preload images
+  -->
+  <link rel="preload" as="image" href="{{ url_for('static', filename='images/hero-banner.jpg') }}">
+
+</head>
+
+<body id="top">
+
+  <!--
+    - #HEADER
+  -->
+
+  <header class="header" data-header>
+    <div class="container">
+
+      <button class="nav-toggle-btn" aria-label="toggle manu" data-nav-toggler>
+        <ion-icon name="menu-outline" aria-hidden="true" class="menu-icon"></ion-icon>
+        <ion-icon name="close-outline" aria-label="true" class="close-icon"></ion-icon>
+      </button>
+
+      <a href="#" class="logo">Kitter</a>
+
+      <nav class="navbar" data-navbar>
+    <ul class="navbar-list">
+        <li class="navbar-item">
+            <a href="#home" class="navbar-link" data-nav-link>Home</a>
+        </li>
+        <li class="navbar-item">
+            <a href="#shop" class="navbar-link" data-nav-link>Shop</a>
+        </li>
+        <li class="navbar-item">
+            <a href="#category" class="navbar-link" data-nav-link>Collections</a>
+        </li>
+        <li class="navbar-item">
+            <a href="{{ url_for('main.readmore') }}" class="navbar-link" data-nav-link>Blogs</a>
+        </li>
+        <li class="navbar-item">
+            <a href="{{ url_for('main.ResourceCenter') }}" class="navbar-link" data-nav-link>Contact</a>
+        </li>
+    </ul>
+
+    <a href="{{ url_for('main.login') }}" class="navbar-action-btn">Log In</a>
+</nav>
+
+
+      <div class="header-actions">
+
+        <button class="action-btn" aria-label="Search">
+          <ion-icon name="search-outline" aria-hidden="true"></ion-icon>
+        </button>
+
+        <button class="action-btn user" aria-label="User">
+          <a href="{{ url_for('main.login') }}"><ion-icon name="person-outline" aria-hidden="true"></ion-icon></a>
+        </button>
+
+        <button id="basketButton" class="action-btn" aria-label="cart">
+          <ion-icon name="bag-handle-outline" aria-hidden="true"></ion-icon>
+          <span id="badge" class="btn-badge">0</span>
+        </button>
+
+      </div>
+
+    </div>
+  </header>
+
+
+
+
+
+  <main>
+    <article>
+
+      <!--
+        - #HERO
+      -->
+
+     <section class="section hero has-bg-image" id="home" aria-label="home" style="background-image: url('{{ url_for('static', filename='images/hero-banner.jpg') }}')">
+      <div class="container">
+        <h1 class="h1 hero-title">
+          <span class="span">High Quality</span> Pet Food
+        </h1>
+        <p class="hero-text">Sale up to 40% off today</p>
+        <a href="#shop" class="btn">Shop Now</a>
+      </div>
+    </section>
+      <!--
+        - #CATEGORY
+      -->
+
+      <section id="category" class="section category" aria-label="category">
+        <div class="container">
+
+          <h2 class="h2 section-title">
+            <span class="span">Top</span> categories
+          </h2>
+
+          <ul class="has-scrollbar">
+
+            <li class="scrollbar-item">
+              <div class="category-card">
+
+                <figure class="card-banner img-holder" style="--width: 330; --height: 300;">
+                  <img src="{{ url_for('static', filename='images/category-1.jpg') }}" width="330" height="300" loading="lazy" alt="Cat Food" class="img-cover">
+                </figure>
+
+                <h3 class="h3">
+                  <a href="{{ url_for('main.categories') }}" target="_blank" class="card-title">Cat Food</a>
+                </h3>
+
+              </div>
+            </li>
+
+            <li class="scrollbar-item">
+              <div class="category-card">
+
+                <figure class="card-banner img-holder" style="--width: 330; --height: 300;">
+                    <img src="{{ url_for('static', filename='images/category-2.jpg') }}" width="330" height="300" loading="lazy" alt="Cat Toys" class="img-cover">
+                </figure>
+
+
+                <h3 class="h3">
+                  <a href="{{ url_for('main.categories') }}" target="_" class="card-title">Cat Toys</a>
+                </h3>
+
+              </div>
+            </li>
+
+            <li class="scrollbar-item">
+              <div class="category-card">
+
+                <figure class="card-banner img-holder" style="--width: 330; --height: 300;">
+                  <img src="{{ url_for('static', filename='images/category-3.jpg') }}" width="330" height="300" loading="lazy" alt="Dog Food"
+                       class="img-cover">
+                </figure>
+
+                <h3 class="h3">
+                  <a href="{{ url_for('main.categories') }}" target="_blank" class="card-title">Dog Food</a>
+                </h3>
+
+              </div>
+            </li>
+
+            <li class="scrollbar-item">
+              <div class="category-card">
+
+                <figure class="card-banner img-holder" style="--width: 330; --height: 300;">
+                  <img src="{{url_for('static', filename='images/category-4.jpg')}}" width="330" height="300" loading="lazy" alt="Dog Toys"
+                       class="img-cover">
+                </figure>
+
+                <h3 class="h3">
+                  <a href="{{ url_for('main.categories') }}" class="card-title">Dog Toys</a>
+                </h3>
+
+              </div>
+            </li>
+
+            <li class="scrollbar-item">
+              <div class="category-card">
+
+                <figure class="card-banner img-holder" style="--width: 330; --height: 300;">
+                  <img src="{{url_for('static', filename='images/category-5.jpg')}}" width="330" height="300" loading="lazy"
+                       alt="Dog Sumpplements" class="img-cover">
+                </figure>
+
+                <h3 class="h3">
+                  <a href="{{ url_for('main.categories') }}" target="_blank" class="card-title">Dog Sumpplements</a>
+                </h3>
+
+              </div>
+            </li>
+
+          </ul>
+
+        </div>
+      </section>
+
+
+
+
+
+      <!--
+        - #OFFERS
+      -->
+      <section class="section offer" aria-label="offer">
+
+        <div class="container">
+          <h2 class="h2 section-title">
+            <span class="span">About</span> Pets
+          </h2>
+          <ul class="grid-list ">
+
+            <li>
+              <div class="offer-card has-bg-image img-holder"
+                style="background-image: url('{{ url_for('static', filename='images/offer-banner-1.jpg' ) }}'); --width: 540; --height: 374;">
+
+                <p class="card-subtitle">Selected Items. Online Only.</p>
+
+                <h3 class="h3 card-title">
+                  Hot Summer <span class="span">Deals</span>
+                </h3>
+
+                <a href="{{ url_for('main.Dog1') }}" class="btn">Read More</a>
+
+              </div>
+            </li>
+
+            <li>
+              <div class="offer-card has-bg-image img-holder"
+                style="background-image: url('{{ url_for('static', filename='images/offer-banner-2.jpg') }}'); --width: 540; --height: 374;">
+
+                <p class="card-subtitle">Treats & Grooming</p>
+
+                <h3 class="h3 card-title">
+                  Spoil your true <span class="span">love</span>
+                </h3>
+
+                <a href="{{ url_for('main.Cat1') }}" class="btn">Read More</a>
+
+              </div>
+            </li>
+
+            <li>
+              <div class="offer-card has-bg-image img-holder"
+                style="background-image: url('{{ url_for('static', filename='images/offer-banner-3.jpg') }}'); --width: 540; --height: 374;">
+
+                <p class="card-subtitle">Our Brand You Will Love</p>
+
+                <h3 class="h3 card-title">
+                  New in this <span class="span">year</span>
+                </h3>
+
+                <a href="{{ url_for('main.brid1') }}" class="btn">Read More</a>
+
+              </div>
+            </li>
+
+          </ul>
+          <div class="readMore">
+            <a href="{{ url_for('main.readmore') }}"><button class="button-77" role="button">Read More</button></a>
+
+          </div>
+        </div>
+      </section>
+
+
+
+
+
+      <!--
+        - #PRODUCT
+      -->
+
+      <section class="section product" id="shop" aria-label="product">
+        <div class="container">
+
+          <h2 class="h2 section-title">
+            <span class="span">Best</span> Seller
+          </h2>
+
+          <ul id="grid-list" class="grid-list">
+
+
+
+          </ul>
+          <div class="loadMore"><a href="{{ url_for('main.categories') }}"><button class="button-77" role="button">Load
+                More</button></a></div>
+
+        </div>
+      </section>
+
+
+
+      <!--
+        - #Buy Product
+      -->
+
+      <section id="basketProducts" class="basket">
+        <h2 class="h2 section-title">
+          <span class="span">Your</span> Basket
+        </h2>
+        <div id="basket" class="grid-list"></div>
+        <div id="totalPrice"></div>
+      </section>
+
+
+
+
+      <!--
+        - #SERVICE
+      -->
+
+      <section class="section service" aria-label="service">
+        <div class="container">
+
+          <img src="{{ url_for('static', filename='images/service-image.png') }}" width="122" height="136" loading="lazy" alt="" class="img">
+
+          <h2 class="h2 section-title">
+            <span class="span">What your pet needs,</span> when they need it.
+          </h2>
+
+          <ul class="grid-list">
+
+            <li>
+              <div class="service-card">
+
+                <figure class="card-icon">
+                  <img src="{{ url_for('static', filename='images/service-icon-1.png') }}" width="70" height="70" loading="lazy"
+                       alt="service icon">
+                </figure>
+
+                <h3 class="h3 card-title">Free Same-Day Delivery</h3>
+
+                <p class="card-text">
+                  Order by 2pm local time to get free delivery on orders $35+ today.
+                </p>
+
+              </div>
+            </li>
+
+            <li>
+              <div class="service-card">
+
+                <figure class="card-icon">
+                  <img src="{{ url_for('static', filename='images/service-icon-2.png') }}" width="70" height="70" loading="lazy"
+                       alt="service icon">
+                </figure>
+
+                <h3 class="h3 card-title">30 Day Return</h3>
+
+                <p class="card-text">
+                  35% off your first order plus 5% off all future orders.
+                </p>
+
+              </div>
+            </li>
+
+            <li>
+              <div class="service-card">
+
+                <figure class="card-icon">
+                  <img src="{{ url_for('static', filename='images/service-icon-3.png') }}" width="70" height="70" loading="lazy"
+                       alt="service icon">
+                </figure>
+
+                <h3 class="h3 card-title">Security payment</h3>
+
+                <p class="card-text">
+                  25% off your online order of $50+. Available at most locations.
+                </p>
+
+              </div>
+            </li>
+
+            <li>
+              <div class="service-card">
+
+                <figure class="card-icon">
+                  <img src="{{ url_for('static', filename='images/service-icon-4.png') }}" width="70" height="70" loading="lazy"
+                       alt="service icon">
+                </figure>
+
+                <h3 class="h3 card-title">24/7 Support</h3>
+
+                <p class="card-text">
+                  Shop online to get orders over $35 shipped fast and free.
+                </p>
+
+              </div>
+            </li>
+
+          </ul>
+
+        </div>
+      </section>
+
+
+
+
+
+      <!--
+        - #CTA
+      -->
+
+      <section class="cta has-bg-image" aria-label="cta" style="background-image: url('cta-bg.jpg')">
+        <div class="container">
+
+          <figure class="cta-banner">
+            <img src="{{url_for('static', filename='images/cta-banner.png')}}" width="900" height="660" loading="lazy" alt="cat" class="w-100">
+          </figure>
+
+          <div class="cta-content">
+
+            <img src="{{url_for('static', filename='images/cta-icon.png')}}" width="120" height="35" loading="lazy" alt="taste guarantee"
+                 class="img">
+
+            <h2 class="h2 section-title">Taste it, love it or we’ll replace it… Guaranteed!</h2>
+
+            <p class="section-text">
+              At Petio, we believe your dog and cat will love their food so much that if they don’t … we’ll help you
+              find a
+              replacement. That’s our taste guarantee.
+            </p>
+
+            <a href="{{ url_for('main.find') }}" class="btn">Find out more</a>
+
+          </div>
+
+        </div>
+      </section>
+
+
+
+
+
+      <!--
+        - #BRAND
+      -->
+
+      <section class="section brand" aria-label="brand">
+        <div class="container">
+
+          <h2 class="h2 section-title">
+            <span class="span">Popular</span> Brands
+          </h2>
+
+          <ul class="has-scrollbar">
+
+            <li class="scrollbar-item">
+              <div class="brand-card img-holder" style="--width: 150; --height: 150;">
+                <img src="{{url_for('static', filename='images/brand-1.jpg')}}" width="150" height="150" loading="lazy" alt="brand logo"
+                     class="img-cover">
+              </div>
+            </li>
+
+            <li class="scrollbar-item">
+              <div class="brand-card img-holder" style="--width: 150; --height: 150;">
+                <img src="{{url_for('static', filename='images/brand-2.jpg')}}" width="150" height="150" loading="lazy" alt="brand logo"
+                     class="img-cover">
+              </div>
+            </li>
+
+            <li class="scrollbar-item">
+              <div class="brand-card img-holder" style="--width: 150; --height: 150;">
+                <img src="{{url_for('static', filename='images/brand-3.jpg')}}" width="150" height="150" loading="lazy" alt="brand logo"
+                     class="img-cover">
+              </div>
+            </li>
+
+            <li class="scrollbar-item">
+              <div class="brand-card img-holder" style="--width: 150; --height: 150;">
+                <img src="{{url_for('static', filename='images/brand-4.jpg')}}" width="150" height="150" loading="lazy" alt="brand logo"
+                     class="img-cover">
+              </div>
+            </li>
+
+            <li class="scrollbar-item">
+              <div class="brand-card img-holder" style="--width: 150; --height: 150;">
+                <img src="{{url_for('static', filename='images/brand-5.jpg')}}" width="150" height="150" loading="lazy" alt="brand logo"
+                     class="img-cover">
+              </div>
+            </li>
+
+          </ul>
+
+        </div>
+      </section>
+
+    </article>
+  </main>
+
+
+
+
+
+  <!--
+    - #FOOTER
+  -->
+
+  <footer class="footer" style="background-image: url('{{ url_for('static', filename='footer-bg.jpg') }}')">
+
+    <div class="footer-top section">
+      <div class="container">
+
+        <div class="footer-brand">
+
+          <a href="#" class="logo">Kitter</a>
+
+          <p class="footer-text">
+            If you have any question, please contact us at <a href="mailto:support@gmail.com"
+              class="link">support@gmail.com</a>
+          </p>
+
+          <ul class="contact-list">
+
+            <li class="contact-item">
+              <ion-icon name="location-outline" aria-hidden="true"></ion-icon>
+
+              <address class="address">
+                30 Buttonwood St.Pataskala OH 43062
+              </address>
+            </li>
+
+            <li class="contact-item">
+              <ion-icon name="call-outline" aria-hidden="true"></ion-icon>
+
+              <a href="tel:+16234567891011" class="contact-link">(+1)-6234-56-789-1011</a>
+            </li>
+
+          </ul>
+
+          <ul class="social-list">
+
+            <li>
+              <a href="#" class="social-link">
+                <ion-icon name="logo-facebook"></ion-icon>
+              </a>
+            </li>
+
+            <li>
+              <a href="#" class="social-link">
+                <ion-icon name="logo-twitter"></ion-icon>
+              </a>
+            </li>
+
+            <li>
+              <a href="#" class="social-link">
+                <ion-icon name="logo-pinterest"></ion-icon>
+              </a>
+            </li>
+
+            <li>
+              <a href="#" class="social-link">
+                <ion-icon name="logo-instagram"></ion-icon>
+              </a>
+            </li>
+
+          </ul>
+
+        </div>
+
+        <ul class="footer-list">
+
+          <li>
+            <p class="footer-list-title">Corporate</p>
+          </li>
+
+          <li>
+            <a href="components/corporate/AboutUS.html" class="footer-link">About Us</a>
+          </li>
+
+          <li>
+            <a href="{{ url_for('main.ResourceCenter') }}" class="footer-link">Contact Us</a>
+          </li>
+
+          <li>
+            <a href="components/corporate/Faq.html" class="footer-link">FAQs</a>
+          </li>
+
+          <li>
+            <a href="components/corporate/Vendors.html" class="footer-link">Vendors</a>
+          </li>
+
+        </ul>
+
+        <ul class="footer-list">
+
+          <li>
+            <p class="footer-list-title">Information</p>
+          </li>
+
+          <li>
+            <a href="components/categories.html" class="footer-link">Online Store</a>
+          </li>
+
+          <li>
+            <a href="components/information/privacy.html" class="footer-link">Privacy Policy</a>
+          </li>
+
+          <li>
+            <a href="components/information/privacy.html" class="footer-link">Refund Policy</a>
+          </li>
+
+          <li>
+            <a href="components/information/privacy.html" class="footer-link">Shipping Policy</a>
+          </li>
+
+          <li>
+            <a href="components/information/privacy.html" class="footer-link">Terms of Service</a>
+          </li>
+
+          <li>
+            <a href="components/information/trackOrder.html" class="footer-link">Track Order</a>
+          </li>
+
+        </ul>
+
+        <ul class="footer-list">
+
+          <li>
+            <p class="footer-list-title">Services</p>
+          </li>
+
+          <li>
+            <a href="components/services/Grooming.html" class="footer-link">Grooming</a>
+          </li>
+
+          <li>
+            <a href="components/services/Grooming.html" class="footer-link">Positive Dog Training</a>
+          </li>
+
+          <li>
+            <a href="components/services/Veterinary.html" class="footer-link">Veterinary Services</a>
+          </li>
+
+          <li>
+            <a href="components/services/PetInsurance.html" class="footer-link">Petco Insurance</a>
+          </li>
+
+          <li>
+            <a href="components/services/Adoption.html" class="footer-link">Pet Adoption</a>
+          </li>
+
+          <li>
+            <a href="{{ url_for('main.ResourceCenter') }}" class="footer-link">Resource Center</a>
+          </li>
+
+        </ul>
+
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container">
+
+        <p class="copyright">
+          &copy; 2024 Made with ♥ by <a href="#" class="copyright-link">John Doe</a>
+        </p>
+        <img src="{{ url_for('static', filename='images/payment.png') }}" width="397" height="32" loading="lazy" alt="payment method" class="img">
+
+      </div>
+    </div>
+
+  </footer>
+
+
+
+
+
+  <!--
+    - #BACK TO TOP
+  -->
+
+  <a href="#top" class="back-top-btn" aria-label="back to top" data-back-top-btn>
+    <ion-icon name="chevron-up" aria-hidden="true"></ion-icon>
+  </a>
+
+
+  <script>
+    let products = [
+    {
+      id: 1,
+      name: "Commodo leo sed porta",
+      price: '15.00',
+      img1: "{{ url_for('static', filename='images/product-1.jpg') }}",
+      img2: "{{ url_for('static', filename='images/product-1_0.jpg') }}",
+      class: 'rating-wrapper',
+      href: "{{ url_for('main.product1') }}"
+    },
+    {
+      id: 2,
+      name: "Purus consequat congue sit",
+      price: '45.00',
+      img1: "{{ url_for('static', filename='images/product-2.jpg') }}",
+      img2: "{{ url_for('static', filename='images/product-2_0.jpg') }}",
+      class: 'rating-wrapper gray',
+      href: "{{ url_for('main.product2') }}"
+    },
+    {
+      id: 3,
+      name: "Morbi vel arcu scelerisque",
+      price: '45.00',
+      img1: "{{ url_for('static', filename='images/product-3.jpg') }}",
+      img2: "{{ url_for('static', filename='images/product-3_0.jpg') }}",
+      class: 'rating-wrapper gray',
+      href: './components/products/product3.html'
+    },
+    {
+      id: 4,
+      name: "Morbi vel arcu scelerisque",
+      price: '49.00',
+      img1: "{{ url_for('static', filename='images/product-4.jpg') }}",
+      img2: "{{ url_for('static', filename='images/product-4_0.jpg') }}",
+      class: 'rating-wrapper gray',
+      href: './components/products/product4.html'
+    },
+    {
+      id: 5,
+      name: "Morbi vel arcu scelerisque",
+      price: '85.00',
+      img1: "{{ url_for('static', filename='images/product-5.jpg') }}",
+      img2: "{{ url_for('static', filename='images/product-5_0.jpg') }}",
+      class: 'rating-wrapper gray',
+      href: './components/products/product5.html'
+    },
+    {
+      id: 6,
+      name: "Nam justo libero porta ege",
+      price: '85.00',
+      img1: "{{ url_for('static', filename='images/product-6.jpg') }}",
+      img2: "{{ url_for('static', filename='images/product-6_0.jpg') }}",
+      class: 'rating-wrapper gray',
+      href: './components/products/product6.html'
+    },
+    {
+      id: 7,
+      name: "Nam justo libero porta ege",
+      price: '85.00',
+      img1: "{{ url_for('static', filename='images/product-7.jpg') }}",
+      img2: "{{ url_for('static', filename='images/product-7_0.jpg') }}",
+      class: 'rating-wrapper gray',
+      href: './components/products/product7.html'
+
+    },
+    {
+      id: 8,
+      name: "Etiam commodo leo sed",
+      price: '55.00',
+      img1: "{{ url_for('static', filename='images/product-8.jpg') }}",
+      img2: "{{ url_for('static', filename='images/product-8_0.jpg') }}",
+      class: 'rating-wrapper gray',
+      href: './components/products/product8.html'
+    }
+  ]
+  </script>
+
+
+  <!--
+    - custom js link
+  -->
+  <<script src="{{ url_for('static', filename='js/script.js') }}" defer></script>
+
+  <!--
+    - ionicon link
+  -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+
+</html>

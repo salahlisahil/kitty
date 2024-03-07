@@ -1,0 +1,67 @@
+
+*{
+    margin: 0;
+    padding: 0;
+}
+.petsAbout{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+    background-image: url('{{ url_for('static', filename='images/curve.avif') }}');
+    background-size: cover;
+    background-repeat: no-repeat;
+
+}
+.petImage{
+    margin-left: 20px;
+    width: 50%;
+    height: auto;
+}
+.petImage img{
+    width: 400px;
+}
+
+.petText {
+    margin-right: 20px;
+    width: 50%;
+    height: 220px;
+    padding: 20px;
+    box-shadow: 0 0 0 2px hsl(36, 94%, 57%)  ;
+}
+.petText h1{
+    font-size: 3.2rem;
+    line-height: 1.1;
+    margin-bottom: 12px;
+}
+.petText li{
+    padding: 5px;
+    font-size: 1.2rem;
+}
+
+.petText span{
+    font-weight: 550;
+}
+
+@media (max-width: 768px){
+    .petsAbout {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        gap: 30px;
+    }
+    .petImage{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+    .petText{
+       width: 100%;
+       display: flex;
+       flex-direction: column;
+       align-items: center;
+    }
+}

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+          <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+              <link rel="stylesheet" href="{{ url_for('static', filename='product.css') }}">
+  
+                <link
+                  href="https://fonts.googleapis.com/css2?family=Bangers&family=Carter+One&family=Nunito+Sans:wght@400;700&display=swap"
+                  rel="stylesheet">
+  
+                  <title>Best Seller</title>
+  
+                </head>
+  
+                <body>
+  
+                  <!--
+                  - #PRODUCT
+              -->
+  
+              <section class="section product " id="shop" aria-label="product">
+                <div class="header">
+                  <h2 class="h2 section-title">
+                    <span class="span">Best</span> Seller
+                  </h2>
+                </div>
+                <div class="bottom">
+                  <div class="container">
+
+
+
+                    <ul class="grid-list">
+
+                      <li>
+                        <div class="product-card">
+
+                          <div class="card-banner img-holder" style="--width: 360; --height: 360;">
+                            <img src="{{ url_for('static', filename='images/product-2.jpg') }}" width="360" height="360" loading="lazy"
+                                 alt="Commodo leo sed porta" class="img-cover default">
+                              <img src="{{ url_for('static', filename='images/product-2_0.jpg') }}" width="360" height="360" loading="lazy"
+                                   alt="Commodo leo sed porta" class="img-cover hover">
+
+
+                              </div>
+
+                              <div class="card-content">
+
+                                <div class="wrapper">
+                                  <div class='rating-wrapper gray'>
+                                    <ion-icon name="star" aria-hidden="true"></ion-icon>
+                                    <ion-icon name="star" aria-hidden="true"></ion-icon>
+                                    <ion-icon name="star" aria-hidden="true"></ion-icon>
+                                    <ion-icon name="star" aria-hidden="true"></ion-icon>
+                                    <ion-icon name="star" aria-hidden="true"></ion-icon>
+                                  </div>
+
+                                  <span class="span">(2)</span>
+                                </div>
+
+                                <h3 class="h3">
+                                  <a href="#" class="card-title">Purus consequat congue sit</a>
+                                </h3>
+
+                                <data class="card-price" value="15">$45.00</data>
+
+                              </div>
+
+                          </div>
+                      </li>
+
+                    </ul>
+
+
+
+                  </div>
+                  <div class="about">
+                    <h2 class="h2 section-title">
+                      <span class="span">About</span> Product
+                    </h2>
+                    <ul>
+
+                      <li><b>Complete –</b> provides adequate amounts of all the required nutrients </li>
+                      <li><b>Balanced –</b> the nutrients are present in the correct proportions</li>
+                      <li><b>Digestible –</b> your pet is able to digest the food and absorb the nutrients</li>
+                      <li><b>Palatable –</b> appealing enough to be eaten</li>
+                      <li><b>Safe –</b> free of toxins or anything which could harm a pet</li>
+
+
+
+
+                    </ul>
+
+
+
+                  </div>
+                </div>
+
+              </section>
+                  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+                  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+                </body></html>

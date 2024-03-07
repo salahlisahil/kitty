@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  <title>Document</title>
+</head>
+
+<body>
+  <section class="section resource">
+    <div class="containerResource">
+
+      <h2 class="h2 section-title">
+        <span class="span">Resource</span> Center
+      </h2>
+      <div class="cards">
+        <div class="card">
+          <img src="{{ url_for('static', filename='images/resource1.webp') }}" alt="resource">
+          <div>
+            <p>Order food for your pet </p>
+            <span>February 1, 2022 </span>
+          </div>
+
+        </div>
+        <div class="card">
+          <img src="{{ url_for('static', filename='images/resource2.jpg') }}" alt="resource">
+          <div>
+            <p>Quality food for your pet </p>
+            <span>May 12, 2022 </span>
+          </div>
+
+        </div>
+        <div class="card">
+          <img src="{{ url_for('static', filename='images/resource3.jpg') }}" alt="resource">
+          <div>
+            <p>Products of many companies </p>
+            <span>July 8, 2022 </span>
+          </div>
+        </div>
+      </div>
+      <div class="writeUs">
+
+        <div class="write">
+
+          <div class="writeContainer">
+            <div class="element">
+              <h4 class="h2 section-title">
+                <p> <span class="span">Write</span> Us</p>
+              </h4>
+            </div>
+            <div class="menu-inputs">
+
+              <div class="inputs">
+                <div class="input_box">
+                  <input type="text" id="date" class="input-field" required>
+                  <label for="date" class="label">Name</label>
+                </div>
+                <div class="input_box">
+                  <input type="email" id="cvv" class="input-field" required>
+                  <label for="cvv" class="label">Email</label>
+
+                </div>
+
+              </div>
+              <div class="textarea">
+                <textarea placeholder="Your message" name="textarea" id="textarea" cols="30" rows="10"></textarea>
+              </div>
+            </div>
+
+            <button id="button-77" class="button-77" role="button">Send Message</button>
+          </div>
+
+        </div>
+        <div class="footerResource">
+          <div class="map">
+
+          </div>
+          <div class="socialMedia">
+
+          </div>
+        </div>
+        <footer class="footer" style="background-image: url('{{ url_for('static', filename='footer-bg.jpg') }}')">
+
+          <div class="footer-top section">
+            <div class="container">
+
+              <div class="footer-brand">
+
+                <a href="../../index.html" class="logo">Kitter</a>
+
+                <p class="footer-text">
+                  If you have any question, please contact us at <a href="mailto:support@gmail.com"
+                    class="link">support@gmail.com</a>
+                </p>
+
+                <ul class="contact-list">
+
+                  <li class="contact-item">
+                    <ion-icon name="location-outline" aria-hidden="true"></ion-icon>
+
+                    <address class="address">
+                      30 Buttonwood St.Pataskala OH 43062
+                    </address>
+                  </li>
+
+                  <li class="contact-item">
+                    <ion-icon name="call-outline" aria-hidden="true"></ion-icon>
+
+                    <a href="tel:+16234567891011" class="contact-link">(+1)-6234-56-789-1011</a>
+                  </li>
+
+                </ul>
+
+                <ul class="social-list">
+
+                  <li>
+                    <a href="#" class="social-link">
+                      <ion-icon name="logo-facebook"></ion-icon>
+                    </a>
+                  </li>
+
+                  <li>
+                    <a href="#" class="social-link">
+                      <ion-icon name="logo-twitter"></ion-icon>
+                    </a>
+                  </li>
+
+                  <li>
+                    <a href="#" class="social-link">
+                      <ion-icon name="logo-pinterest"></ion-icon>
+                    </a>
+                  </li>
+
+                  <li>
+                    <a href="#" class="social-link">
+                      <ion-icon name="logo-instagram"></ion-icon>
+                    </a>
+                  </li>
+
+                </ul>
+
+              </div>
+
+
+              <div class="contact-map">
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2359.0096716864527!2d-0.17033392352831242!3d51.53509167181968!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48761abe33b299ff%3A0xb9636302be60ef5e!2zUGV0dGllIEhvdXNlLCBMb25kb24gTlc4IDZKUywgQmlybMmZxZ9tacWfIEtyYWxsxLFx!5e1!3m2!1saz!2saz!4v1699552544946!5m2!1saz!2saz"
+                  allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+              </div>
+            </div>
+          </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container">
+
+        <p class="copyright">
+          &copy; 2022 Made with ♥ by <a href="#" class="copyright-link">codewithsadee.</a>
+        </p>
+        <img src="{{ url_for('static', filename='images/payment.png') }}" width="397" height="32" loading="lazy" alt="payment method"
+             class="img">
+
+      </div>
+    </div>
+
+    </footer>
+    </div>
+
+
+    </div>
+  </section>
+  <script>
+    function initMap() {
+      var map = new google.maps.Map(document.getElementById('map'), {
+        center: { lat: -34.397, lng: 150.644 },
+        zoom: 8
+      });
+    }
+  </script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap" async defer></script>
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+
+</html>

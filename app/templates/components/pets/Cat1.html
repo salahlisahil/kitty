@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/pets.css') }}">
+    <title>About Pets</title>
+</head>
+
+<body>
+   
+    <div class="petsAbout">
+        <div class="petImage">
+            <img src="{{ url_for('static', filename='images/offer-banner-5.jpg') }}" alt="pet1">
+        </div>
+        <div class="petText">
+            <h1>About Pet</h1>
+            <ul>
+                <li><span>Pet Type:</span> Cat</li>
+                <li><span>Pet Breed:</span> Mixed Breed</li>
+                <li><span>Advertiser Type:</span> Private Seller</li>
+                <li><span>Pet's Age:</span> 3 months 17 days</li>
+                <li><span>Microchipped:</span> Yes</li>
+            </ul>
+        </div>
+    </div>
+</body>
+
+</html>

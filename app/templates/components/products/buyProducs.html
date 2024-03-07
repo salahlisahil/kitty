@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bangers&family=Carter+One&family=Nunito+Sans:wght@400;700&display=swap"
+        rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/buyProduct.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <title>Buy Product</title>
+
+</head>
+
+<body>
+    <div id="wrapper">
+        <div class="wrapper">
+            <div class="login_box">
+                <div class="login-header">
+                    <h1>Buy Pet</h1>
+                </div>
+                <div class="all-inputs">
+                    <div class="input_box">
+                        <input type="text" id="name" class="input-field" required>
+                        <label for="name" class="label">Your Name</label>
+                        <i class="fa-solid fa-user"></i>
+                    </div>
+                    <div class="input_box">
+                        <input type="text" id="phoneNumber" class="input-field" required>
+                        <label for="phoneNumber" class="label">Phone Number</label>
+                        <i class="fa-solid fa-phone"></i>
+                    </div>
+                    <div class="input_box">
+                        <input type="text" id="cardNumber" class="input-field" required>
+                        <label for="cardNumber" class="label">Card Number</label>
+                        <i class="fa-solid fa-user-tie"></i>
+                    </div>
+                    <div class="input_box">
+                        <input type="text" id="date" class="input-field" required>
+                        <label for="date" class="label">Expiration Date</label>
+                        <i class="fa-solid fa-calendar-days"></i>
+                    </div>
+                    <div class="input_box">
+                        <input type="text" id="cvv" class="input-field" required>
+                        <label for="cvv" class="label">CVV</label>
+                        <i class="fa-regular fa-address-card"></i>
+                    </div>
+                    <div class="input_box">
+                        <input type="email" id="email" class="input-field" required>
+                        <label for="email" class="label">Email</label>
+                        <i class="fa-regular fa-email"></i>
+                    </div>
+                    <div class="input_box">
+                        <button id=moreDetails class="input-field">Place for more details</button>
+                        <i class="fa-solid fa-circle-info"></i>
+                    </div>
+                </div>
+                <div class="input_price">
+                    <div>Total price</div>
+                    <div class="div"></div>
+                    <div id="totalPrice">$</div>
+                </div>
+                <div class="input_box">
+                    <input type="submit" class="input-submit" value="Buy Product">
+                </div>
+            </div>
+
+
+
+        </div>
+    </div>
+    <script src="../../../static/js/service.js"></script>
+</body>
+
+</html>

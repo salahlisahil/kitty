@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <title>Document</title>
+</head>
+
+<body>
+    <section class="section  taste">
+        <div class="container">
+
+            <h2 class="h2 section-title">
+                <span class="span">Taste</span> Guarantee
+            </h2>
+
+            <ul class="tasteUl">
+
+                <li>
+                    <div>
+                        <img src="{{ url_for('static', filename='images/taste1.jfif') }}">
+                    </div>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laudantium quasi quam ex, reprehenderit
+                        eveniet hic magnam adipisci ut, id incidunt porro nobis.</p>
+                </li>
+
+                <li>
+                    <div>
+                        <img src="{{ url_for('static', filename='images/taste2.webp') }}">
+                    </div>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laudantium quasi quam ex, reprehenderit
+                        eveniet hic magnam adipisci ut, id incidunt porro nobis.</p>
+
+                </li>
+
+                <li>
+                    <div>
+                        <img src="{{ url_for('static', filename='images/taste3.webp') }}">
+                    </div>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Et, rerum recusandae dolore deleniti
+                        officiis cum dolor cupiditate eligendi! Iste repudiandae officiis distinctio!</p>
+                </li>
+
+
+
+            </ul>
+
+        </div>
+        <div class="video">
+            <h2 class="h4 section-title">
+                <span class="span">Watch</span> This Video
+            </h2>
+            <video controls autoplay loop muted width="800"
+                src="{{ url_for('static', filename='images/WhatsApp%20Video%202024-02-03%20at%2021.28.18.mp4') }}">
+            </video>
+
+        </div>
+
+    </section>
+</body>
+
+</html>
