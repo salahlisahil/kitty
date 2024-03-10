@@ -80,7 +80,7 @@ This project is **free to use** and does not contain any license.
 
 ### ☑ Creators
 
-The project got prepared by a consistent effort of [Sahil](https://github.com/salahlisahil)
+The project got prepared by a consistent effort of [Sahil](https://github.com/salahlisahil), [Aisha](https://github.com/ayshenm), [Alex](https://github.com/alexop89056)
 
 <br>
 
